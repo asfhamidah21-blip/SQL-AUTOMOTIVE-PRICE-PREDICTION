@@ -3,7 +3,7 @@ Analisis harga mobil bekas 989k data- BMW, Ford, Honda, Toyota | SQL Deepnote
 
 **Sumber Data** Kaggle - Automotive Price Prediction Dataset
 **Dataset:** 1.000.000 baris → 989 ribu baris setelah pembersihan data
-**Tools:** SQL, Deepnote, Power BI
+**Tools:** SQL, Deepnote
 **Tujuan:** Portfolio Data Analyst
 
 
