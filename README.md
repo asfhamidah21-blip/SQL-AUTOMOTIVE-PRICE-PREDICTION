@@ -41,6 +41,11 @@ antara lain:
 - Vehicle Age
 - Price
 
+### 🔗 Sumber Data
+
+Dataset diperoleh dari:
+[Kaggle](https://www.kaggle.com/datasets/metawave/vehicle-price-prediction)
+
 ## 🧹 Data Cleaning & Data Quality
 
 Tahapan yang dilakukan:
