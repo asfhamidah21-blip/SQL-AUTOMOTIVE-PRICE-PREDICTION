@@ -1,51 +1,98 @@
-# Tentang Project
-Analisis harga mobil bekas 989k data- BMW, Ford, Honda, Toyota | SQL Deepnote
+# 🚗 Analisis Harga Kendaraan
 
-**Sumber Data** Kaggle - Automotive Price Prediction Dataset
-**Dataset:** 1.000.000 baris → 989 ribu baris setelah pembersihan data
-**Tools:** SQL, Deepnote
-**Tujuan:** Portfolio Data Analyst
+## 📌 Gambaran Project
 
+Project ini bertujuan untuk menganalisis data kendaraan guna mengetahui
+faktor-faktor yang berkaitan dengan harga kendaraan.
 
-### Apa Yang Aku Kerjakan:
-- Hapus data duplikat (dari 1jt jadi 989k)
-- Menganalisa harga terendah pada data yang tersedia
-- menganalisa jadi 4 bagian: harga, spek mesin, merek mobil dan tahun mobil.
+Analisis dilakukan menggunakan SQL, mulai dari data profiling,
+data quality checking, data cleaning, hingga exploratory data analysis.
 
-### Hasil Temuan:
+## 🎯 Tujuan Analisis
 
-**1. Analisis Harga Berdasarkan Mobil dan Tahun (Kategori BMW, Honda, Toyota & Ford)  - BMW Paling Mahal**
-Tahun 2020 harga rata-rata BMW $32.004, Honda cuma $15.142. Beda 2x lipat. Merek premium memang tahan harga.
+- Memahami karakteristik data kendaraan
+- Mengidentifikasi masalah kualitas data
+- Melakukan proses data cleaning
+- Menganalisis faktor-faktor yang berkaitan dengan harga kendaraan
+- Menghasilkan insight dan rekomendasi berdasarkan hasil analisis
 
-**2. Kilometer Ekstrim >200rb = Harga Anjlok 4x Lipat**
-- KM <50rb : harga ~$32811.0
-- KM >200rb (Ekstrim) : harga ~$7485.0
-Artinya pembeli takut kalau KM udah lewat 100rb, lewat dari itu harga terjun bebas.
+## 🛠️ Tools yang Digunakan
 
-**3. Umur Mobil - Depresiasi Stabil 10% per Tahun**
-- Mobil umur 1 tahun: $39.425
-- Mobil umur 10 tahun: $15.807 (turun 60%)
-- Tahun pertama hampir tidak turun (1,1%), setelah itu turun konsisten 9-12% tiap tahun.
-- Insight: Tidak ada anjlok mendadak, depresiasi mobil bekas itu linier dan stabil setelah tahun ke-2.
-  
-- **4. Analisis Merek Berdasarkan Harga**
-Porsche paling mahal se-dataset ($43.005 rata-rata harga)
+- MySQL
+- Deepnote
+- GitHub
 
-### Rekomendasi
+## 📊 Dataset
 
-**1. Untuk Penjual Mobil Bekas:**
-- Sebaiknya fokus pada mobil dengan kilometer rendah (<50rb) karena harganya masih tinggi sekitar $32.811
-- Mobil dengan kilometer di atas 200rb harganya turun jauh menjadi $7.485, jadi kurang menguntungkan untuk dijual kembali
-- Untuk segmen mewah, merek Porsche ($43.005) dan Land Rover ($39.501) bisa menjadi pilihan utama
-- Untuk segmen umum, BMW memiliki harga yang paling stabil dibanding Honda, Toyota, dan Ford
+Dataset terdiri dari 1.000.000 data kendaraan dengan beberapa informasi,
+antara lain:
 
-**2. Untuk Pembeli Mobil Bekas:**
-- Waktu terbaik membeli adalah mobil umur 3 tahun, karena harganya sudah turun sekitar $4.000 dari harga baru tapi kondisinya masih bagus
-- Disarankan menghindari mobil dengan kilometer di atas 100rb karena harganya akan turun sangat cepat
+- Make
+- Model
+- Year
+- Mileage
+- Engine HP
+- Transmission
+- Fuel Type
+- Drivetrain
+- Body Type
+- Condition
+- Accident History
+- Vehicle Age
+- Price
 
-**3. Untuk Pengembangan Selanjutnya:**
-- Untuk membuat model prediksi harga, 3 faktor terpenting adalah merek mobil, umur mobil, dan kilometer
+## 🧹 Data Cleaning & Data Quality
 
-### File di Repo Ini:
-- `Notebook 1 (1).ipynb` = Semua query SQL dan analisanya
-- `README.md` = Ringkasan ini
+Tahapan yang dilakukan:
+
+1. Data profiling
+2. Pemeriksaan missing value
+3. Pemeriksaan duplicate
+4. Pemeriksaan data type
+5. Pemeriksaan invalid value
+6. Pemeriksaan  outlier
+7. Validasi tahun dan usia kendaraan
+
+## 📈 Analisis
+
+Analisis yang dilakukan:
+
+1. Statistik awal
+2. Harga berdasarkan usia kendaraan
+3. Harga berdasarkan mileage
+4. Harga berdasarkan engine HP
+5. Harga berdasarkan kondisi kendaraan
+6. Harga berdasarkan accident history
+7. Harga berdasarkan model
+8. Analisis Make × Condition
+
+## 💡 Insight
+
+### 1. Harga dan Usia Kendaraan
+
+Harga kendaraan cenderung lebih rendah ketika usia kendaraan semakin tinggi. Kendaraan berusia 1–5 tahun memiliki rata-rata harga yang jauh lebih tinggi dibandingkan kendaraan berusia 10–25 tahun.
+
+### 2. Harga dan Mileage
+
+Kendaraan dengan mileage yang lebih tinggi cenderung memiliki harga yang lebih rendah. Kendaraan dengan mileage terendah memiliki rata-rata harga lebih dari tiga kali kendaraan dengan mileage tertinggi.
+
+### 3. Harga dan Engine HP
+
+Kendaraan dengan tenaga mesin lebih tinggi cenderung memiliki harga yang lebih tinggi. Kelompok kendaraan dengan 300–581 HP memiliki rata-rata harga hampir tiga kali kelompok 90–162 HP.
+
+### 4. Merek dan Kondisi Kendaraan
+
+Kendaraan dengan kondisi Excellent cenderung memiliki
+rata-rata harga lebih tinggi dibandingkan kondisi Good dan Fair
+dalam masing-masing merek.
+
+## 💼 Rekomendasi
+
+- Kondisi kendaraan dapat dijadikan salah satu pertimbangan dalam
+  menentukan strategi harga.
+- Usia dan mileage kendaraan dapat digunakan sebagai faktor pendukung
+  dalam menentukan harga.
+- Kendaraan dengan kondisi yang lebih baik dapat diposisikan pada
+  rentang harga yang lebih tinggi.
+- Analisis lebih lanjut dapat dilakukan untuk mengetahui karakteristik
+  kendaraan dengan harga tinggi.
